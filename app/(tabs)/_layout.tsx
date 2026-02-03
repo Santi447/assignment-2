@@ -15,14 +15,14 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: "Games",
-          headerTitle: "Home",
+          headerTitle: "Games",
         }}
       />
       <Tabs.Screen
         name="tv"
         options={{
           title: "TV",
-          headerTitle: "Home",
+          headerTitle: "TV",
         }}
       />
     </Tabs>
