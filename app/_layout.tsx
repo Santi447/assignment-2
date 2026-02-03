@@ -4,7 +4,9 @@ export default function RootLayout() {
   return <Stack
   screenOptions={{
     headerStyle:{backgroundColor: "black"},
-    headerTitleStyle:{color: "white"}
+    headerTitleStyle:{color: "white"},
+    headerTitle : "Games",
+    headerShown: false,
   }}
   />;
 }
