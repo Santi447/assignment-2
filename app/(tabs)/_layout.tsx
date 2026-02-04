@@ -1,5 +1,7 @@
+import CircleButton from "@/components/ui/CircleButton";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { View, StyleSheet } from "react-native";
 
 export default function TabsLayout() {
   return (
@@ -8,6 +10,7 @@ export default function TabsLayout() {
         tabBarActiveTintColor: "white",
         tabBarStyle: { backgroundColor: "black" },
         tabBarLabelPosition: "below-icon",
+        headerStyle: { backgroundColor: "black"},
       }}
     >
       <Tabs.Screen
@@ -29,7 +32,19 @@ export default function TabsLayout() {
         options={{
           title: "Games",
           headerTitle: "Games",
-           tabBarIcon: ({ focused }) => (
+          headerTitleContainerStyle: {left: 45},
+          headerTintColor: "white",
+          headerRight: () => (
+            <View style={{ flexDirection: "row" }}>
+              <View style={styles.filterButton}>
+                <CircleButton />
+              </View>
+              <View style={styles.whereToWatchButton}>
+                <CircleButton />
+              </View>
+            </View>
+          ),
+          tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "football-sharp" : "football-outline"}
               size={24}
@@ -55,3 +70,13 @@ export default function TabsLayout() {
     </Tabs>
   );
 }
+
+
+const styles = StyleSheet.create({
+    filterButton:{
+        marginRight: 20
+    },
+    whereToWatchButton: {
+        marginRight: 20
+    }
+})
