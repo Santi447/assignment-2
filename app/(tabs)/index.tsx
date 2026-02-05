@@ -1,13 +1,16 @@
 import { Text, View,StyleSheet } from "react-native";
-import {Header} from "../../components/ui/header";
-import CircleButton from "../../components/ui/CircleButton";
 import GameCardBox from "@/components/GameCardBox";
 
 export default function Index() {
   return (
 
     <View style={style.viewStyle} >
-     <GameCardBox title="Copa Del Rey" SubTitle="Quarter-Finals" gameTime="01:00 PM" moreInfo="See Matchday" teamA="Real Betis" teamB="Atletico Madrid"/>
+      <View>
+       <GameCardBox title="Copa Del Rey" SubTitle="Quarter-finals" gameTime="01:00 PM" moreInfo="See Matchday" teamA="Real Betis" teamB="Atletico Madrid"/>
+      </View>
+      <View>
+       <GameCardBox title="Coupe de France" SubTitle="Round of 16" gameTime="01:00 PM" moreInfo="See Matchday" teamA="Strasbourg" teamB="Monaco"/>
+      </View>
     </View>
   );
 }
