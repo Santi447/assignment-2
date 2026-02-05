@@ -20,7 +20,7 @@ export default function GameCardBox(props: Props) {
             <Text style={styles.TextColorWhite}>{props.compLogoUrl}</Text>
             <Text style={[styles.TextColorWhite,styles.CompTitleStyle]}>{props.title}</Text>
             <View style={styles.TopHorizontalSeperator}/>
-            <Text style={[styles.TextColorWhite,styles.CompSubTitleStyle]}>{props.SubTitle}</Text>
+            <Text style={[styles.CompSubTitleStyle]}>{props.SubTitle}</Text>
             <View style={styles.MiddleLeftVeritcalSeperator}/>
             <Text style={[styles.TextColorWhite,styles.GameTimeStyle]}>{props.gameTime}</Text>
             <View style={styles.MiddleRightVeritcalSeperator}/>
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     },
     CompSubTitleStyle: {
         fontSize: 12,
-        marginLeft: "15%"
+        marginLeft: "15%",
+        color: "grey",
     },
     SeeMatchdayStyle: {
         marginTop: "57%",
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
       MiddleRightVeritcalSeperator:{
         width: 1,
         backgroundColor: "grey",
-        height: "30%",
+        height: "29%",
         position: "absolute",
         marginLeft: "81%",
         marginTop: "28%",
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
       MiddleLeftVeritcalSeperator:{
         width: 1,
         backgroundColor: "grey",
-        height: "30%",
+        height: "29%",
         position: "absolute",
         marginLeft: "55%",
         marginTop: "28%",
