@@ -42,8 +42,8 @@ export default function TabsLayout() {
                 <ProfilePicture />
               </View>
               <View style={styles.dates}>
-                <DateBoxes title="Today" />
                 <DateBoxes title="Yesterday" />
+                <DateBoxes title="Today" />
                 <DateBoxes title="Tomorrow" />
                 <DateBoxes title="Fri Feb 6" />
               </View>
