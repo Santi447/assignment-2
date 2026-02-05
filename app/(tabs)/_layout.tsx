@@ -2,7 +2,7 @@ import CircleButton from "@/components/ui/CircleButton";
 import ProfilePicture from "@/components/ui/ProfilePicture";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function TabsLayout() {
   return (
@@ -11,7 +11,7 @@ export default function TabsLayout() {
         tabBarActiveTintColor: "white",
         tabBarStyle: { backgroundColor: "black" },
         tabBarLabelPosition: "below-icon",
-        headerStyle: { backgroundColor: "black"},
+        headerStyle: { backgroundColor: "black", height: 150 },
       }}
     >
       <Tabs.Screen
@@ -33,14 +33,14 @@ export default function TabsLayout() {
         options={{
           title: "Games",
           headerTitle: "Games",
-          headerTitleContainerStyle: {left: 10},
+          headerTitleContainerStyle: { left: 10, bottom: 35 },
           headerTintColor: "white",
           headerLeft: () => (
-          <View>
-            <View style={styles.profilePicture}>
-              <ProfilePicture/>  
+            <View>
+              <View style={styles.profilePicture}>
+                <ProfilePicture />
+              </View>
             </View>
-          </View>
           ),
           headerRight: () => (
             <View style={{ flexDirection: "row" }}>
@@ -79,15 +79,17 @@ export default function TabsLayout() {
   );
 }
 
-
 const styles = StyleSheet.create({
-    filterButton:{
-        marginRight: 20
-    },
-    whereToWatchButton: {
-        marginRight: 20
-    },
-    profilePicture: {
-        marginLeft: 17
-    }
-})
+  filterButton: {
+    marginRight: 20,
+    marginBottom: 70,
+  },
+  whereToWatchButton: {
+    marginRight: 20,
+    marginBottom: 70,
+  },
+  profilePicture: {
+    marginLeft: 17,
+    marginBottom: 65,
+  },
+});
