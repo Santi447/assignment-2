@@ -37,7 +37,9 @@ const styles = StyleSheet.create({
         backgroundColor: "#1A1F25",
         height: 250,
         marginTop: 45,
-        position: "relative"
+        position: "relative",
+        borderTopWidth: 1,
+        borderTopColor: "grey",
 
     },
 
@@ -45,7 +47,6 @@ const styles = StyleSheet.create({
         color: "white",
     },
     GameTimeStyle: {
-        fontWeight: 'bold',
         marginLeft: "60%",
         marginTop: "35%",
         position: "absolute",
@@ -63,6 +64,7 @@ const styles = StyleSheet.create({
         marginTop: "57%",
         marginLeft: "38%",
         position: "absolute",
+        fontWeight: "bold",
     },
     TeamAStyle:{
         marginLeft: "10%",
