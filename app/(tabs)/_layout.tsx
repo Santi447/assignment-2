@@ -1,4 +1,5 @@
 import CircleButton from "@/components/ui/CircleButton";
+import DateBoxes from "@/components/ui/DateBoxes";
 import ProfilePicture from "@/components/ui/ProfilePicture";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
@@ -9,7 +10,7 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "white",
-        tabBarStyle: { backgroundColor: "black" },
+        tabBarStyle: { backgroundColor: "#1A1F25", marginBottom: 15, paddingTop:5 },
         tabBarLabelPosition: "below-icon",
         headerStyle: { backgroundColor: "black", height: 150 },
       }}
@@ -33,12 +34,18 @@ export default function TabsLayout() {
         options={{
           title: "Games",
           headerTitle: "Games",
-          headerTitleContainerStyle: { left: 10, bottom: 35 },
+          headerTitleContainerStyle: { right: 295, bottom: 35 },
           headerTintColor: "white",
           headerLeft: () => (
             <View>
               <View style={styles.profilePicture}>
                 <ProfilePicture />
+              </View>
+              <View style={styles.dates}>
+                <DateBoxes title="Today" />
+                <DateBoxes title="Yesterday" />
+                <DateBoxes title="Tomorrow" />
+                <DateBoxes title="Fri Feb 6" />
               </View>
             </View>
           ),
@@ -85,11 +92,17 @@ const styles = StyleSheet.create({
     marginBottom: 70,
   },
   whereToWatchButton: {
-    marginRight: 20,
+    marginRight: 81,
     marginBottom: 70,
   },
   profilePicture: {
     marginLeft: 17,
-    marginBottom: 65,
+    marginBottom: 15,
   },
+  dates:{
+    flexDirection: "row",
+    marginBottom: 30,
+    gap: 20,
+    marginLeft: 13,
+  }
 });

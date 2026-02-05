@@ -7,13 +7,21 @@ type props = {
 export default function DateBoxes(props: props) {
   return( 
     <View style={styles.dateBox}>
-        <Text>{props.title}</Text>
+        <Text style={styles.dateText}>{props.title}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
     dateBox:{
-        borderWidth: 1,
+
+        borderRadius: 3,
+        paddingVertical: 4,
+        paddingHorizontal: 8,
+        backgroundColor: "#77777771",
+    },
+    dateText:{
+        color: "white",
+        margin: 'auto',
     }
 })
