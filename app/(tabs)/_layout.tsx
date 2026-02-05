@@ -1,4 +1,5 @@
 import CircleButton from "@/components/ui/CircleButton";
+import ProfilePicture from "@/components/ui/ProfilePicture";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { View, StyleSheet } from "react-native";
@@ -32,8 +33,15 @@ export default function TabsLayout() {
         options={{
           title: "Games",
           headerTitle: "Games",
-          headerTitleContainerStyle: {left: 45},
+          headerTitleContainerStyle: {left: 10},
           headerTintColor: "white",
+          headerLeft: () => (
+          <View>
+            <View style={styles.profilePicture}>
+              <ProfilePicture/>  
+            </View>
+          </View>
+          ),
           headerRight: () => (
             <View style={{ flexDirection: "row" }}>
               <View style={styles.filterButton}>
@@ -78,5 +86,8 @@ const styles = StyleSheet.create({
     },
     whereToWatchButton: {
         marginRight: 20
+    },
+    profilePicture: {
+        marginLeft: 17
     }
 })

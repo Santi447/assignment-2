@@ -6,7 +6,7 @@ export default function Index() {
   return (
 
     <View style={style.viewStyle} >
-      <CircleButton />
+     
     </View>
   );
 }
