@@ -15,8 +15,7 @@ export default function Index() {
 const style = StyleSheet.create({
   viewStyle: {
         flex: 1,
-        justifyContent: "flex-start",
-        alignItems: "flex-end",
-        top: 30,
+
+        backgroundColor: "black",
   }
 })
