@@ -1,17 +1,18 @@
-import { Text, View,StyleSheet } from "react-native";
+import { Text, View,StyleSheet, ScrollView } from "react-native";
 import GameCardBox from "@/components/GameCardBox";
+import games from "@/data/games.json";
 
 export default function Index() {
   return (
-
-    <View style={style.viewStyle} >
-      <View>
-       <GameCardBox title="Copa Del Rey" SubTitle="Quarter-finals" gameTime="01:00 PM" moreInfo="See Matchday" teamA="Real Betis" teamB="Atletico Madrid"/>
+    <ScrollView>
+      <View style={style.viewStyle} >
+        <View style={{marginBottom: 20}}>
+        {games.map((game) => (
+          <GameCardBox key={game.id} {...game}/>
+        ))}
+        </View>
       </View>
-      <View>
-       <GameCardBox title="Coupe de France" SubTitle="Round of 16" gameTime="01:00 PM" moreInfo="See Matchday" teamA="Strasbourg" teamB="Monaco"/>
-      </View>
-    </View>
+    </ScrollView>
   );
 }
 

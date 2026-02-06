@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, } from "react-native";
+import { Image } from "expo-image";
 
 
 type Props = {
@@ -9,15 +10,13 @@ type Props = {
     teamB?: string,
     compLogoUrl?: string,
     moreInfo?: string,
-
-
-
+    teamALogoUrl?: string,
+    teamBLogoUrl?: string,
 };
 
 export default function GameCardBox(props: Props) {
     return(
         <View style={styles.GameBox}>
-            <Text style={styles.TextColorWhite}>{props.compLogoUrl}</Text>
             <Text style={[styles.TextColorWhite,styles.CompTitleStyle]}>{props.title}</Text>
             <View style={styles.TopHorizontalSeperator}/>
             <Text style={[styles.CompSubTitleStyle]}>{props.SubTitle}</Text>
@@ -28,6 +27,12 @@ export default function GameCardBox(props: Props) {
             <Text style={[styles.TextColorWhite,styles.TeamBStyle]}>{props.teamB}</Text>
             <View style={styles.BottomHorizontalSeperator}/>
             <Text style={[styles.TextColorWhite,styles.SeeMatchdayStyle]}>{props.moreInfo}</Text>
+            <Image source={{uri: props.teamALogoUrl}} style={styles.teamALogoStyle}/>
+            <Image source={{uri: props.teamBLogoUrl}} style={styles.teamBLogoStyle}/>
+            <Image source={{uri: props.compLogoUrl}} style={styles.compLogoStyle}/>
+
+            
+            {/* <Image source={{uri: props.teamBLogoUrl}}/> */}
         </View>
     );
 }
@@ -112,5 +117,26 @@ const styles = StyleSheet.create({
         position: "absolute",
         marginLeft: "55%",
         marginTop: "28%",
-      }  
+      },  
+      teamALogoStyle: {
+        width: 25,
+        height: 25,
+        position: "absolute",
+        marginLeft: "1%",
+        marginTop: "29%",
+      },
+        teamBLogoStyle: {
+        width: 25,
+        height: 25,
+        position: "absolute",
+        marginLeft: "1%",
+        marginTop: "39%",
+      },
+      compLogoStyle:{
+        width: 40,
+        height: 40,
+        position: "absolute",
+        marginLeft: "3%",
+        marginTop: "2.5%",
+      }
 });
