@@ -52,10 +52,10 @@ export default function TabsLayout() {
           headerRight: () => (
             <View style={{ flexDirection: "row" }}>
               <View style={styles.filterButton}>
-                <CircleButton />
+                <CircleButton iconName="tv-outline" iconSize={20} />
               </View>
               <View style={styles.whereToWatchButton}>
-                <CircleButton />
+                <CircleButton iconName="filter" iconSize={20} />
               </View>
             </View>
           ),

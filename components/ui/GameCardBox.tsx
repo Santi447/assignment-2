@@ -29,9 +29,7 @@ export default function GameCardBox(props: Props) {
             <Text style={[styles.TextColorWhite,styles.SeeMatchdayStyle]}>{props.moreInfo}</Text>
             <Image source={{uri: props.teamALogoUrl}} style={styles.teamALogoStyle}/>
             <Image source={{uri: props.teamBLogoUrl}} style={styles.teamBLogoStyle}/>
-            <Image source={{uri: props.compLogoUrl}} style={styles.compLogoStyle}/>
-
-            
+            <Image source={{uri: props.compLogoUrl}} style={styles.compLogoStyle}/> 
             {/* <Image source={{uri: props.teamBLogoUrl}}/> */}
         </View>
     );
@@ -39,12 +37,12 @@ export default function GameCardBox(props: Props) {
 
 const styles = StyleSheet.create({
     GameBox:{
-        backgroundColor: "#1A1F25",
+        backgroundColor: "#1A1A1A",
         height: 250,
         marginTop: 45,
         position: "relative",
         borderTopWidth: 1,
-        borderTopColor: "grey",
+        borderTopColor: "#242424",
 
     },
 
@@ -64,7 +62,7 @@ const styles = StyleSheet.create({
     CompSubTitleStyle: {
         fontSize: 12,
         marginLeft: "15%",
-        color: "grey",
+        color: "#A0A0A0",
     },
     SeeMatchdayStyle: {
         marginTop: "57%",
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
     },
     TopHorizontalSeperator: {
         height: 1,
-        backgroundColor: "grey",
+        backgroundColor: "#242424",
         width: "90%",
         marginTop: "22%",
         position: "absolute", 
@@ -96,7 +94,7 @@ const styles = StyleSheet.create({
     },
         BottomHorizontalSeperator: {
         height: 1,
-        backgroundColor: "grey",
+        backgroundColor: "#242424",
         width: "90%",
         marginTop: "52%",
         position: "absolute", 
@@ -104,7 +102,7 @@ const styles = StyleSheet.create({
     },
       MiddleRightVeritcalSeperator:{
         width: 1,
-        backgroundColor: "grey",
+        backgroundColor: "#242424",
         height: "29%",
         position: "absolute",
         marginLeft: "81%",
@@ -112,7 +110,7 @@ const styles = StyleSheet.create({
       },
       MiddleLeftVeritcalSeperator:{
         width: 1,
-        backgroundColor: "grey",
+        backgroundColor: "#242424",
         height: "29%",
         position: "absolute",
         marginLeft: "55%",

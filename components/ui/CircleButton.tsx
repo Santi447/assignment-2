@@ -1,10 +1,20 @@
+
 import { View,StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+
+type props = {
+    iconName? : string, 
+    iconSize? : number,
+};
 
 
-export default function CircleButton() {
+export default function CircleButton(props: props) {
+  
   return( 
   <View style={styles.button}>
-   
+      <View style={styles.iconStyle}>
+      <Ionicons name={props.iconName as any} size={props.iconSize} color="white" />
+      </View>
   </View>
   );
 }
@@ -14,7 +24,11 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         borderRadius: 30,
-        backgroundColor: "grey",
+        backgroundColor: "#1A1A1A",
         flexDirection: "row",
+    },
+    iconStyle: {
+        color: "white",
+        margin: 'auto',
     }
 })

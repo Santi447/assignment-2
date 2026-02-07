@@ -17,8 +17,11 @@ const styles = StyleSheet.create({
 
         borderRadius: 3,
         paddingVertical: 4,
-        paddingHorizontal: 8,
-        backgroundColor: "#77777771",
+        paddingHorizontal: 9,
+        backgroundColor: "#1A1A1A",
+        marginRight: -2,
+        borderColor: "#242424",
+        borderWidth: 1,
     },
     dateText:{
         color: "white",

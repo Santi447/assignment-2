@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 30,
-        backgroundColor: "green",
+        backgroundColor: "#e1ff57",
         flexDirection: "row",
     }
 })
