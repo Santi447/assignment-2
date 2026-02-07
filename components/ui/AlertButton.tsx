@@ -16,12 +16,3 @@ export default function AlertButton(Props : props){
         <Button title={Props.title} onPress={buttonAlert}/>
     );
 }
-
-const styles = StyleSheet.create({
-    cancel:{
-        color: 'red',
-    },
-    default:{
-        color: 'blue',
-    }
-})
